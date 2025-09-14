@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "REACT_APP_SUPABASE_URL": "https://kezregiqfxlrvaxytdet.supabase.co",
+    "REACT_APP_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtlenJlZ2lxZnhscnZheHl0ZGV0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc2OTY5MTgsImV4cCI6MjA3MzI3MjkxOH0.X4QWu0W31Kv_8KGQ6h_n4PYnQOMTX85CYbWJVbv2AxM",
+    "REACT_APP_OPENAI_API_KEY": "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"
+  }
+}
+

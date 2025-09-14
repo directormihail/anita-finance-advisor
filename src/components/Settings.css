@@ -1,0 +1,514 @@
+.settings {
+  height: 100vh;
+  background-color: #0f0f0f;
+  overflow-y: auto;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.settings-header {
+  padding: 20px;
+  border-bottom: 1px solid #333;
+  background-color: #1a1a1a;
+}
+
+.settings-header h1 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.settings-header p {
+  color: #888;
+  font-size: 14px;
+}
+
+.settings-content {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+.settings-sidebar {
+  width: 250px;
+  background-color: #1a1a1a;
+  border-right: 1px solid #333;
+  padding: 20px 0;
+}
+
+.settings-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-tab {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.nav-tab:hover {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.nav-tab.active {
+  background-color: #333;
+  color: #fff;
+  border-right: 3px solid #667eea;
+}
+
+.settings-main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.settings-section {
+  max-width: 600px;
+}
+
+.settings-section h2 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.edit-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.edit-button:hover {
+  transform: scale(1.05);
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.profile-avatar {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.profile-info h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.profile-info p {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.member-since {
+  color: #667eea;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #ccc;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 12px 16px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-group input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.save-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cancel-button {
+  padding: 12px 20px;
+  background: none;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.billing-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.billing-info h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.billing-info p {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.price {
+  color: #10b981;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.manage-button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.payment-methods h3 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.payment-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background-color: #2a2a2a;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.payment-card span:first-of-type {
+  color: #fff;
+  font-size: 14px;
+}
+
+.card-type {
+  margin-left: auto;
+  color: #888;
+  font-size: 12px;
+}
+
+.add-payment {
+  padding: 10px 16px;
+  background: none;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.notification-settings,
+.privacy-settings,
+.appearance-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+}
+
+.setting-item.danger {
+  border: 1px solid #ef4444;
+}
+
+.setting-info h4 {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.setting-info p {
+  color: #888;
+  font-size: 12px;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #444;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #667eea;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.danger-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #ef4444;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.theme-selector,
+.accent-selector {
+  margin-bottom: 24px;
+}
+
+.theme-selector h4,
+.accent-selector h4 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.theme-options {
+  display: flex;
+  gap: 12px;
+}
+
+.theme-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-option.active {
+  border: 2px solid #667eea;
+}
+
+.theme-preview {
+  width: 40px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.theme-preview.dark {
+  background: linear-gradient(45deg, #1a1a1a 50%, #333 50%);
+}
+
+.theme-preview.light {
+  background: linear-gradient(45deg, #f5f5f5 50%, #e0e0e0 50%);
+}
+
+.theme-option span {
+  color: #ccc;
+  font-size: 12px;
+}
+
+.color-options {
+  display: flex;
+  gap: 8px;
+}
+
+.color-option {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.color-option.active {
+  border-color: #fff;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .settings-content {
+    flex-direction: column;
+  }
+  
+  .settings-sidebar {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+  
+  .settings-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0 20px;
+  }
+  
+  .nav-tab {
+    white-space: nowrap;
+    border-right: none;
+    border-bottom: 3px solid transparent;
+  }
+  
+  .nav-tab.active {
+    border-right: none;
+    border-bottom-color: #667eea;
+  }
+  
+  .settings-main {
+    padding: 16px;
+  }
+  
+  .billing-card {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .theme-options {
+    flex-direction: column;
+  }
+}

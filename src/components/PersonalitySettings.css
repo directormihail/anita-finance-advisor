@@ -1,0 +1,358 @@
+/* Personality Settings Component Styles */
+.personality-settings {
+  position: relative;
+  display: inline-block;
+}
+
+.personality-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.personality-toggle:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.personality-panel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 400px;
+  max-height: 80vh;
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.personality-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: var(--accent-color);
+  color: var(--text-color);
+}
+
+.personality-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.personality-sections {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.personality-section {
+  margin-bottom: 24px;
+}
+
+.personality-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.section-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Tone Options */
+.tone-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tone-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tone-option:hover {
+  border-color: var(--accent-color);
+  background: var(--hover-background);
+}
+
+.tone-option input[type="radio"] {
+  margin: 0;
+  accent-color: var(--accent-color);
+}
+
+.tone-option input[type="radio"]:checked + .option-content {
+  color: var(--accent-color);
+}
+
+.option-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.option-label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.option-description {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* Emoji Options */
+.emoji-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.emoji-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.emoji-option:hover {
+  border-color: var(--accent-color);
+  background: var(--hover-background);
+}
+
+.emoji-option input[type="radio"] {
+  margin: 0;
+  accent-color: var(--accent-color);
+}
+
+/* Length Options */
+.length-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.length-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.length-option:hover {
+  border-color: var(--accent-color);
+  background: var(--hover-background);
+}
+
+.length-option input[type="radio"] {
+  margin: 0;
+  accent-color: var(--accent-color);
+}
+
+/* Advice Options */
+.advice-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.advice-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.advice-option:hover {
+  border-color: var(--accent-color);
+  background: var(--hover-background);
+}
+
+.advice-option input[type="radio"] {
+  margin: 0;
+  accent-color: var(--accent-color);
+}
+
+/* Expertise Grid */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.expertise-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+}
+
+.expertise-option:hover {
+  border-color: var(--accent-color);
+  background: var(--hover-background);
+}
+
+.expertise-option input[type="checkbox"] {
+  margin: 0;
+  accent-color: var(--accent-color);
+}
+
+/* Catchphrase Grid */
+.catchphrase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.catchphrase-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+}
+
+.catchphrase-option:hover {
+  border-color: var(--accent-color);
+  background: var(--hover-background);
+}
+
+.catchphrase-option input[type="checkbox"] {
+  margin: 0;
+  accent-color: var(--accent-color);
+}
+
+/* Footer */
+.personality-footer {
+  padding: 20px;
+  border-top: 1px solid var(--border-color);
+  background: var(--background);
+}
+
+.reset-button {
+  width: 100%;
+  padding: 12px;
+  background: var(--danger-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.reset-button:hover {
+  background: var(--danger-hover);
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .personality-panel {
+    width: 320px;
+    right: -50px;
+  }
+  
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .catchphrase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .personality-panel {
+  background: var(--card-background);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .tone-option,
+[data-theme="dark"] .emoji-option,
+[data-theme="dark"] .length-option,
+[data-theme="dark"] .advice-option {
+  background: var(--card-background);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .tone-option:hover,
+[data-theme="dark"] .emoji-option:hover,
+[data-theme="dark"] .length-option:hover,
+[data-theme="dark"] .advice-option:hover {
+  background: var(--hover-background);
+  border-color: var(--accent-color);
+}

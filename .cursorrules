@@ -1,0 +1,125 @@
+# ANITA Finance Advisor - Cursor Rules
+
+## Project Overview
+This is a React TypeScript finance advisor chatbot application called "ANITA" that helps users track their income and expenses through natural language conversations.
+
+## Tech Stack
+- React 18 with TypeScript
+- CSS3 for styling
+- localStorage for data persistence
+- Lucide React for icons
+- No external state management (uses React hooks)
+
+## Project Structure
+```
+src/
+├── components/
+│   ├── ChatInterface.tsx     # Main chat component with conversation memory
+│   ├── FinancePage.tsx       # Financial data visualization
+│   ├── FinancialStats.tsx    # Financial statistics display
+│   ├── Settings.tsx          # App settings and theme
+│   └── Sidebar.tsx           # Navigation sidebar
+├── App.tsx                   # Main app component with state management
+└── index.tsx                 # App entry point
+```
+
+## Key Features
+- **Conversation Memory**: Full chat history persistence with localStorage
+- **Transaction Parsing**: Natural language to financial data conversion
+- **Contextual Responses**: Bot responses based on conversation history
+- **Theme Support**: Dark/light mode switching
+- **Responsive Design**: Mobile-friendly interface
+- **Financial Tracking**: Income/expense categorization and tracking
+
+## Code Style Guidelines
+
+### TypeScript
+- Use strict typing for all props and state
+- Define interfaces for complex objects (Message, Transaction)
+- Use optional chaining and nullish coalescing
+- Prefer type over interface for simple unions
+
+### React Patterns
+- Use functional components with hooks
+- Implement proper prop drilling for state management
+- Use useRef for DOM manipulation
+- Implement proper cleanup in useEffect
+
+### CSS Guidelines
+- Use CSS modules or component-specific CSS files
+- Follow BEM-like naming for complex selectors
+- Use CSS custom properties for theming
+- Implement responsive design with mobile-first approach
+
+### Component Architecture
+- Keep components focused and single-purpose
+- Extract reusable logic into custom hooks when needed
+- Use proper prop interfaces for component communication
+- Implement proper error boundaries
+
+## Data Management
+- Use localStorage for persistence (transactions, messages, theme)
+- Convert Date objects properly when serializing/deserializing
+- Implement proper error handling for localStorage operations
+- Use unique IDs for all data entities
+
+## Chat Interface Rules
+- Messages have unique IDs and timestamps
+- Support both user and bot message types
+- Implement typing indicators for better UX
+- Auto-scroll to latest messages
+- Parse natural language for financial transactions
+
+## Transaction Parsing
+- Use regex patterns for income/expense detection
+- Categorize expenses automatically when possible
+- Support various natural language patterns
+- Handle edge cases gracefully
+
+## Styling Guidelines
+- Use dark theme as default with light theme option
+- Implement smooth transitions and hover effects
+- Use consistent spacing and typography
+- Follow accessibility guidelines for color contrast
+
+## Performance Considerations
+- Implement proper memoization for expensive calculations
+- Use efficient array methods for data processing
+- Avoid unnecessary re-renders with proper dependency arrays
+- Implement proper cleanup for event listeners
+
+## Testing Approach
+- Focus on component integration testing
+- Test localStorage persistence
+- Test transaction parsing edge cases
+- Test responsive design breakpoints
+
+## Common Patterns
+- Use controlled components for form inputs
+- Implement proper loading states
+- Use confirmation dialogs for destructive actions
+- Implement proper keyboard navigation
+
+## File Naming
+- Use PascalCase for component files
+- Use kebab-case for CSS files
+- Use descriptive names that indicate purpose
+- Keep file names concise but clear
+
+## Error Handling
+- Implement try-catch for localStorage operations
+- Provide user-friendly error messages
+- Log errors to console for debugging
+- Gracefully handle malformed data
+
+## Accessibility
+- Use semantic HTML elements
+- Implement proper ARIA labels
+- Ensure keyboard navigation works
+- Maintain proper color contrast ratios
+
+## Future Considerations
+- Consider implementing a proper state management solution if complexity grows
+- Add unit tests for critical functions
+- Implement data export/import functionality
+- Consider adding more sophisticated NLP for transaction parsing

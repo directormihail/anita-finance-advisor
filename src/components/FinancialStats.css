@@ -1,0 +1,171 @@
+.financial-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stats-section {
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.stats-section h4 {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.pie-chart-container {
+  margin-bottom: 12px;
+}
+
+.expense-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.legend-label {
+  color: #ccc;
+  flex: 1;
+}
+
+.legend-value {
+  color: #fff;
+  font-weight: 600;
+}
+
+.bar-chart-container {
+  margin-bottom: 8px;
+}
+
+.bar-chart {
+  display: flex;
+  align-items: end;
+  gap: 8px;
+  height: 120px;
+  padding: 0 8px;
+}
+
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+
+.bar-labels {
+  margin-bottom: 4px;
+}
+
+.month-label {
+  font-size: 10px;
+  color: #888;
+  text-align: center;
+}
+
+.bars {
+  display: flex;
+  gap: 2px;
+  align-items: end;
+  height: calc(100% - 20px);
+  width: 100%;
+}
+
+.bar {
+  flex: 1;
+  min-height: 2px;
+  border-radius: 2px 2px 0 0;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.bar:hover {
+  opacity: 0.8;
+}
+
+.income-bar {
+  background-color: #10b981;
+}
+
+.expense-bar {
+  background-color: #ef4444;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.chart-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #ccc;
+}
+
+.stats-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background-color: #1a1a1a;
+  border-radius: 6px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.summary-label {
+  color: #888;
+}
+
+.summary-value {
+  color: #fff;
+  font-weight: 600;
+}
+
+.summary-value.positive {
+  color: #10b981;
+}
+
+@media (max-width: 768px) {
+  .financial-stats {
+    gap: 16px;
+  }
+  
+  .stats-section {
+    padding: 12px;
+  }
+  
+  .pie-chart-container {
+    height: 120px;
+  }
+  
+  .bar-chart-container {
+    height: 100px;
+  }
+}
