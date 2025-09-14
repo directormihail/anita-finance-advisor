@@ -28,7 +28,7 @@ const FinancePage: React.FC<FinancePageProps> = ({ transactions, user }) => {
   return (
     <div className="finance-page">
       <div className="finance-header">
-        <h1>Finance Dashboard - Live!</h1>
+        <h1>Finance Dashboard</h1>
       </div>
       
       <div className="finance-content">
