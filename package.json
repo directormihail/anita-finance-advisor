@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "node auto-deploy.js && git add . && git commit -m \"Auto-deploy: Update environment variables\" && git push",
+    "deploy": "node simple-deploy.js",
     "add-api": "node manage-apis.js",
     "setup-vercel": "vercel login && vercel env add REACT_APP_OPENAI_API_KEY production && vercel env add REACT_APP_SUPABASE_URL production && vercel env add REACT_APP_SUPABASE_ANON_KEY production && vercel --prod"
   },

@@ -151,7 +151,7 @@ class AutoDeployer {
     // Generate GitHub Actions workflow for automatic deployment
     generateGitHubActions(envVars) {
         const envVarsYaml = Object.entries(envVars)
-            .map(([key, value]) => `        ${key}: ${{ secrets.${key} }}`)
+            .map(([key, value]) => `        ${key}: \${{\${secrets.${key}}}}`)
             .join('\n');
 
         const workflow = `name: Deploy to Vercel
@@ -185,9 +185,9 @@ ${envVarsYaml}
     - name: Deploy to Vercel
       uses: amondnet/vercel-action@v25
       with:
-        vercel-token: ${{ secrets.VERCEL_TOKEN }}
-        vercel-org-id: ${{ secrets.ORG_ID }}
-        vercel-project-id: ${{ secrets.PROJECT_ID }}
+        vercel-token: \${{\${secrets.VERCEL_TOKEN}}}
+        vercel-org-id: \${{\${secrets.ORG_ID}}}
+        vercel-project-id: \${{\${secrets.PROJECT_ID}}}
         vercel-args: '--prod'`;
 
         return workflow;
